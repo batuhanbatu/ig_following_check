@@ -1,5 +1,8 @@
-def print_hi(name):
-    print(f'Hi, {name}')
+import locale
 
-if __name__ == '__main__':
-    print_hi('Instagram Following Check!')
+# Finding language of the operating system
+print(locale.getdefaultlocale())
+
+# Opening a saved html file
+file = open("file.html", "r")
+print (file.read())
