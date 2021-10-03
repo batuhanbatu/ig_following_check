@@ -30,7 +30,6 @@ following = []
 for i in eachFollowingHtml:
     following.append(((i.split('FPmhX'))[1].split("</a>")[0]).split(' tabindex="0">')[1])
 
-
 # Controlling each followers whether we follow that account or no and adding it to not
 # following list according to the result
 counter = 0
@@ -38,8 +37,9 @@ notFollowingList = []
 for i in followers:
     for j in following:
         if i == j: break
-        else: counter += 1
-    if counter == len(following): notFollowingList.append(i)
+        else:
+            counter += 1
+            if counter == len(following): notFollowingList.append(i)
     counter = 0
 
 # Controlling each following whether that follows our account or no and adding it to not
@@ -49,15 +49,16 @@ notFollowersList = []
 for i in following:
     for j in followers:
         if i == j: break
-        else: counter += 1
-    if counter == len(followers): notFollowersList.append(i)
+        else:
+            counter += 1
+            if counter == len(followers): notFollowersList.append(i)
     counter = 0
 
 # Printing results to the python terminal
-print("\nHere is the accounts which you do not follow:\n")
+print("\nHere is the accounts which you do not follow (" + str(len(notFollowingList)) + ") accounts:\n")
 for i in notFollowingList: print(i)
 print("\n************************************************")
-print("\nHere is the accounts which do not follow you:\n")
+print("\nHere is the accounts which do not follow you (" + str(len(notFollowersList)) + ") accounts:\n")
 for i in notFollowersList: print(i)
 
 # Author: Batuhan Batu
