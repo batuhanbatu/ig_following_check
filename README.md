@@ -40,5 +40,7 @@ And we have to be sure that the name of the file is "followers.html" and located
 
 After saving second html file, we can run the program and see the results. If you think that program is working wrong, check your lists on Instagram's website :)
 
+By the way, keep in mind that you can use this program for any account that you can reach followers & following list :)
+
 _Thank you so much for reading till here, Hope to see you on next projects.._
 _Batuhan Batu_
